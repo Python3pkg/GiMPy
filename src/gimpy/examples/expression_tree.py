@@ -12,5 +12,5 @@ T.add_right_child('7', '*')
 T.set_display_mode('file')
 T.display(basename='expression')
 T.printexp()
-print
+print()
 T.postordereval()

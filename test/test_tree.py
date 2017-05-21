@@ -16,7 +16,7 @@ if __name__=='__main__':
     t.dfs()
     # test bfs
     t.bfs()
-    print 'off display done'
+    print('off display done')
     # test print_nodes(display='pygame')
     t.print_nodes(display='pygame')
     # test dfs(display='pygame')

@@ -345,7 +345,7 @@ def produce_graphs():
     theoretical.
     '''
     # get number of runs, common for all graphs
-    n = range(len(run_time['DFS']['theoretical']))
+    n = list(range(len(run_time['DFS']['theoretical'])))
     for a in algo:
         # ========= reimplementation
         # create graph for algorithm a
@@ -357,7 +357,7 @@ def produce_graphs():
         pyplot.title('regimpy '+a+' running time vs theoretical')
         pyplot.xlabel('instances')
         pyplot.ylabel('running time')
-        print a+"_regimpy.png written to disk."
+        print(a+"_regimpy.png written to disk.")
         pyplot.savefig(a+'_regimpy.png')
         pyplot.close()
         # ========= old gimpy
@@ -370,16 +370,16 @@ def produce_graphs():
         pyplot.title('old gimpy '+a+' running time vs theoretical')
         pyplot.xlabel('instances')
         pyplot.ylabel('running time')
-        print a+"_gimpy.png written to disk."
+        print(a+"_gimpy.png written to disk.")
         pyplot.savefig(a+'_gimpy.png')
         pyplot.close()
 
 if __name__=='__main__':
     nr_seed = 1
     for i in range(nr_seed):
-        print "Seed", i
+        print("Seed", i)
         for gen in dense_generator:
-            print gen
+            print(gen)
             # unzip generator
             (numnodes, density, demand_numnodes, supply_numnodes,
              demand_range, cost_range, capacity_range) = gen
@@ -387,23 +387,23 @@ if __name__=='__main__':
             #g, rg = generate_graph(i+1)
             g = None
             rg = generate_graph(i+1)
-            print "Testing DFS..."
+            print("Testing DFS...")
             test_DFS(g, rg)
-            print "Testing BFS..."
+            print("Testing BFS...")
             test_BFS(g, rg)
-            print "Testing Dijkstra..."
+            print("Testing Dijkstra...")
             test_dijkstra(g, rg)
-            print "Testing Kruskal..."
+            print("Testing Kruskal...")
             test_kruskal(g, rg)
-            print "Testing Prim..."
+            print("Testing Prim...")
             test_prim(g, rg)
-            print "Testing PreflowPush..."
+            print("Testing PreflowPush...")
             test_preflow_push(g, rg)
-            print "Testing augmenting path..."
+            print("Testing augmenting path...")
             test_augmenting_path(g, rg)
-            print "Testing cycle canceling..."
+            print("Testing cycle canceling...")
             test_cycle_canceling(g, rg)
-            print "Testing network simplex..."
+            print("Testing network simplex...")
             test_network_simplex(g, rg)
             insert_theoretical_runing_times(rg)
     write_result_files()

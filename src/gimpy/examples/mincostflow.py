@@ -50,4 +50,4 @@ if __name__=='__main__':
     for n in nl:
         for m in nl:
             if g.check_edge(n, m):
-                print n, m, g.get_edge_attr(n, m, 'flow')
+                print(n, m, g.get_edge_attr(n, m, 'flow'))

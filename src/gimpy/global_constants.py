@@ -129,7 +129,7 @@ def quote_if_necessary(s):
         if s is True:
             return 'True'
         return 'False'
-    if not isinstance(s, basestring):
+    if not isinstance(s, str):
         return s
     if not s:
         return s
@@ -138,7 +138,7 @@ def quote_if_necessary(s):
                    "\n" : r'\n',
                    "\r" : r'\r',
                    "\\ " : r'\\ '}
-        for (a,b) in replace.items():
+        for (a,b) in list(replace.items()):
             s = s.replace(a, b)
         return '"' + s + '"'
     return s

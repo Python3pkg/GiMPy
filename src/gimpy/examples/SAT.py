@@ -37,6 +37,6 @@ if __name__ == '__main__':
     
     G.set_display_mode('xdot')
 
-    print G
+    print(G)
 
     G.display(basename='Turing')

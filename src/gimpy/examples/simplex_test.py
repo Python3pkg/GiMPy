@@ -201,7 +201,7 @@ class mGraph(Graph):
         return (True, iter)
 
 if __name__=='__main__':
-    print
+    print()
     dantzig_file = open('dantzig_results.txt', 'w')
     eligible_file = open('eligible_results.txt', 'w')
     dantzig_file.write('# seed, simplex obj value, pulp obj value,'+\
@@ -253,4 +253,4 @@ if __name__=='__main__':
     dantzig_file.close()
     eligible_file.close()
     if flag:
-        print 'All problems solved accurately.'
+        print('All problems solved accurately.')

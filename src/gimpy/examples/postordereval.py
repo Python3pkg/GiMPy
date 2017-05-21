@@ -14,5 +14,5 @@ if __name__ == '__main__':
     T.add_right_child(3, 1, label = '5')
     T.add_right_child(4, 0, label = '7')
     T.printexp(True)
-    print
+    print()
     T.postordereval(True)
